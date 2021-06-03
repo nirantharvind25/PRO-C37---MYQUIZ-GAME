@@ -45,16 +45,21 @@ if (allContestants!==undefined){
   fill("blue")
   textSize(20)
   text("Note:Contestant who answered correct are highlighted in green color!",130,230);
-}
-    //write code to add a note here
-
-    //write code to highlight contest who answered correctly
-    for(var plr in allContestants){
+  var y=300
+  for(var plr in allContestants){
       var correctAns ="2";
       if(correctAns ===allContestants[plr].answer)
       fill("green")
       else
       fill("red");
+    
+    text(allContestants[plr].name+":"+allContestants[plr].answer,300,y)
+    y=y+50
     }
+}
+    //write code to add a note here
+
+    //write code to highlight contest who answered correctly
+    
   }
 }
